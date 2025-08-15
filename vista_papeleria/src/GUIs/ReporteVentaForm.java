@@ -50,9 +50,6 @@ public class ReporteVentaForm extends javax.swing.JFrame {
         btnTodas = new javax.swing.JButton();
         clientesC = new javax.swing.JComboBox<>();
         lblCliente = new javax.swing.JLabel();
-        jDateChooserDesde = new com.toedter.calendar.JDateChooser();
-        jDateChooserHasta = new com.toedter.calendar.JDateChooser();
-        jDateChooserFecha = new com.toedter.calendar.JDateChooser();
         btnBuscar = new javax.swing.JButton();
         lblCliente1 = new javax.swing.JLabel();
         jCheckBox = new javax.swing.JCheckBox();
@@ -125,9 +122,6 @@ public class ReporteVentaForm extends javax.swing.JFrame {
         lblCliente.setForeground(new java.awt.Color(0, 0, 0));
         lblCliente.setText("Fecha:");
         tblVenta.add(lblCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, 20));
-        tblVenta.add(jDateChooserDesde, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 180, -1));
-        tblVenta.add(jDateChooserHasta, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 170, -1));
-        tblVenta.add(jDateChooserFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 200, -1));
 
         btnBuscar.setBackground(new java.awt.Color(0, 0, 255));
         btnBuscar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -468,9 +462,6 @@ public class ReporteVentaForm extends javax.swing.JFrame {
     private javax.swing.JButton btnTodas;
     private javax.swing.JComboBox<String> clientesC;
     private javax.swing.JCheckBox jCheckBox;
-    private com.toedter.calendar.JDateChooser jDateChooserDesde;
-    private com.toedter.calendar.JDateChooser jDateChooserFecha;
-    private com.toedter.calendar.JDateChooser jDateChooserHasta;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
