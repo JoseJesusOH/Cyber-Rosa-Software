@@ -30,7 +30,7 @@ public class ReporteVentaForm extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         jDateChooserDesde.setEnabled(false);
         jDateChooserFecha.setEnabled(true);
-        jDateChooserHasta.setEnabled(false);
+        jDateChooser3.setEnabled(false);
     }
 
     /**
@@ -48,12 +48,15 @@ public class ReporteVentaForm extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         lblCliente2 = new javax.swing.JLabel();
         btnTodas = new javax.swing.JButton();
+        jDateChooser3 = new com.toedter.calendar.JDateChooser();
         clientesC = new javax.swing.JComboBox<>();
         lblCliente = new javax.swing.JLabel();
         btnBuscar = new javax.swing.JButton();
         lblCliente1 = new javax.swing.JLabel();
+        jDateChooserDesde = new com.toedter.calendar.JDateChooser();
         jCheckBox = new javax.swing.JCheckBox();
         lblCliente4 = new javax.swing.JLabel();
+        jDateChooserFecha = new com.toedter.calendar.JDateChooser();
         txtCodigo = new javax.swing.JTextField();
         lblCliente7 = new javax.swing.JLabel();
         lblCliente5 = new javax.swing.JLabel();
@@ -108,6 +111,7 @@ public class ReporteVentaForm extends javax.swing.JFrame {
             }
         });
         tblVenta.add(btnTodas, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 190, 110, 30));
+        tblVenta.add(jDateChooser3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 330, -1, -1));
 
         clientesC.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         clientesC.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ninguno" }));
@@ -139,6 +143,7 @@ public class ReporteVentaForm extends javax.swing.JFrame {
         lblCliente1.setForeground(new java.awt.Color(0, 0, 0));
         lblCliente1.setText("Cliente:");
         tblVenta.add(lblCliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+        tblVenta.add(jDateChooserDesde, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, -1, -1));
 
         jCheckBox.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -151,6 +156,7 @@ public class ReporteVentaForm extends javax.swing.JFrame {
         lblCliente4.setForeground(new java.awt.Color(0, 0, 0));
         lblCliente4.setText("Fecha Desde:");
         tblVenta.add(lblCliente4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, 20));
+        tblVenta.add(jDateChooserFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, -1, -1));
 
         txtCodigo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tblVenta.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 200, -1));
@@ -315,11 +321,11 @@ public class ReporteVentaForm extends javax.swing.JFrame {
             parametros[3] = calendarDesde.getTime();
 
         }
-        if (jDateChooserHasta.getDate() == null) {
+        if (jDateChooser3.getDate() == null) {
             parametros[4] = null;
         } else {
             Calendar calendarDesde = Calendar.getInstance();
-            calendarDesde.setTime(jDateChooserHasta.getDate());
+            calendarDesde.setTime(jDateChooser3.getDate());
             calendarDesde.set(Calendar.HOUR_OF_DAY, 0);
             calendarDesde.set(Calendar.MINUTE, 0);
             calendarDesde.set(Calendar.SECOND, 0);
@@ -370,12 +376,12 @@ public class ReporteVentaForm extends javax.swing.JFrame {
     private void jCheckBoxStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jCheckBoxStateChanged
         if (jCheckBox.isSelected()) {
             jDateChooserDesde.setEnabled(true);
-            jDateChooserHasta.setEnabled(true);
+            jDateChooser3.setEnabled(true);
             jDateChooserFecha.setEnabled(false);
         } else {
             jDateChooserDesde.setEnabled(false);
             jDateChooserFecha.setEnabled(true);
-            jDateChooserHasta.setEnabled(false);
+            jDateChooser3.setEnabled(false);
         }
     }//GEN-LAST:event_jCheckBoxStateChanged
 
@@ -451,7 +457,7 @@ public class ReporteVentaForm extends javax.swing.JFrame {
         llenarCBoxClientes();
         this.jDateChooserDesde.setDate(null);
         this.jDateChooserFecha.setDate(null);
-        this.jDateChooserHasta.setDate(null);
+        this.jDateChooser3.setDate(null);
         this.txtCodigo.setText("");
         this.jCheckBox.setSelected(false);
     }
@@ -462,6 +468,9 @@ public class ReporteVentaForm extends javax.swing.JFrame {
     private javax.swing.JButton btnTodas;
     private javax.swing.JComboBox<String> clientesC;
     private javax.swing.JCheckBox jCheckBox;
+    private com.toedter.calendar.JDateChooser jDateChooser3;
+    private com.toedter.calendar.JDateChooser jDateChooserDesde;
+    private com.toedter.calendar.JDateChooser jDateChooserFecha;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
