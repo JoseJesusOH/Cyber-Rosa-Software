@@ -16,19 +16,31 @@
         }
 
         #main-form {
-             display: inline-grid;
+            background-image: ("imagenes/login.png");
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         #title-header {
             background-color: aqua;
             text-align: center;
         }
-      #login {
-    display: flex;
-    flex-direction: column-reverse; /* apila de abajo hacia arriba */
-    gap: 10px; /* espacio entre elementos */
-}
 
+        #login {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        #footer {
+            padding: 20px 0px 0px 0px;
+            text-align: center;
+            text-shadow: 10px;
+        }
     </style>
 </head>
 
@@ -37,10 +49,9 @@
         <h1>Cyber Rosa - Sistema de Gestión</h1>
     </header>
     <main id="main-form">
-           <form action="#" id="login">
+        <form action="#" id="login">
             <label for="user-name">Usuario: </label>
             <input type="text" name="usuario-input" id="usuario">
-
             <label for="password">Password: </label>
             <input type="password" name="password-input" id="password">
         </form>
