@@ -16,10 +16,7 @@
         }
 
         #main-form {
-            background-image: ("imagenes/login.png");
-            background-size: cover;
             display: flex;
-            align-items: center;
             justify-content: center;
         }
 
@@ -34,6 +31,16 @@
             align-items: center;
             flex-direction: column;
             gap: 10px;
+            background-color: rgb(45, 187, 244);
+        }
+
+        #crear {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            background-color: rgb(231, 82, 176)
         }
 
         #footer {
@@ -54,6 +61,14 @@
             <input type="text" name="usuario-input" id="usuario">
             <label for="password">Password: </label>
             <input type="password" name="password-input" id="password">
+            <button>login</button>
+        </form>
+        <form action="#" id="crear" style="display: none;">
+            <label for="user-name">Usuario: </label>
+            <input type="text" name="usuario-input" id="usuario">
+            <label for="password">Password: </label>
+            <input type="password" name="password-input" id="password">
+            <button>login</button>
         </form>
     </main>
     <footer id="footer">
